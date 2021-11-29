@@ -15,6 +15,9 @@ const Main = () => {
       return item.name !== name;
     });
     setNewText(newArr);
+    if (newArr === []) {
+      alert("Great job! How did you feel today?");
+    }
   };
 
   const addExercise = (newExercise) => {
