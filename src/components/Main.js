@@ -1,6 +1,7 @@
 import React from 'react';
 import CreateExercise from './CreateExercise'
 import ShowList from './ShowList'
+import Generator from './Generator'
 
 import {exercises} from '../Exercises'
 
@@ -28,6 +29,7 @@ const Main = () => {
                 exercises={newText} 
                 delete={removeExercise}
             />
+            <Generator />
         </div>
     )
 }

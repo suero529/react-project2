@@ -1,7 +1,7 @@
 export const exercises =
 
 [
-    {name: 'laundry'},
-    {name: 'vaccuum'},
-    {name: 'run dishwasher'}
+    {name: 'burpees'},
+    {name: 'plank'},
+    {name: 'stretch'}
 ]
