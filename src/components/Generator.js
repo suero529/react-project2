@@ -5,6 +5,7 @@ import { exercises } from "../Exercises";
 
 const Generator = (props) => {
   const [workout, setWorkout] = React.useState([]);
+
   // const [value, setValue] = React.useState([]);
 
   // useEffect(() => {}, [value]);
@@ -40,7 +41,7 @@ const Generator = (props) => {
 
   return (
     <div>
-      <h1>Pick a Workout</h1>
+      <h1>Some Ideas to Get You Started!</h1>
       <h3>Exercises that require weights:</h3>
       {workout.map((info) => {
         return (
@@ -52,18 +53,19 @@ const Generator = (props) => {
         );
       })}
 
-      <h3>Other Exercises:</h3>
+      <h3>Exercises that require just you-- and your energy! ;)</h3>
 
       {exercises.map((item) => {
-        return(
+        return (
           <div>
-       <Link className='link' to='/glossary'>{item.name}</Link>
-       </div> 
-        )
-      })
-    }
-  </div>
-  )
+            <Link className="link" to="/glossary">
+              {item.name}
+            </Link>
+          </div>
+        );
+      })}
+    </div>
+  );
 };
 
-export default Generator; 
+export default Generator;

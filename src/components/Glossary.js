@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { exercises } from "../Exercises";
 
 const Glossary = () => {
   const [workout, setWorkout] = React.useState([]);
@@ -28,6 +29,15 @@ const Glossary = () => {
           <div>
             <h3>{info.name}</h3>
             {info.description.replace("<p>", "").replace("</p>", "")}
+          </div>
+        );
+      })}
+
+      {exercises.map((item) => {
+        return (
+          <div>
+            <h3>{item.name}</h3>
+            {item.description}
           </div>
         );
       })}
