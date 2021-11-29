@@ -7,6 +7,7 @@ import {exercises} from '../Exercises'
 
 const Main = () => {
     const [newText, setNewText] = React.useState(exercises)
+    const [value, setValue] = React.useState(exercises)
 
     const removeExercise = (name) => {
         let newArr = [...newText]
@@ -22,6 +23,14 @@ const Main = () => {
         setNewText(newArr)
     }
 
+    const filterExercise = (type) => {
+        let newArr = [...value]
+        newArr = newArr.filter((exercise) => {
+        return exercise.type === "Cardio";
+        });
+        setValue(newArr);
+      }
+
     return(
         <div>
             <CreateExercise addExercise={addExercise} />
@@ -29,7 +38,10 @@ const Main = () => {
                 exercises={newText} 
                 delete={removeExercise}
             />
-            <Generator />
+            <Generator 
+                exercises={newText}
+                filterExercise={filterExercise}
+            />
         </div>
     )
 }

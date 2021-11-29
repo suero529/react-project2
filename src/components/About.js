@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const About = () => {
     return(
@@ -7,6 +8,9 @@ const About = () => {
         <p>
             Motivational blurb here 
         </p>
+        <Link className='link' to='/main'>
+            <button>Time to plan it out!</button>
+        </Link>
         </div>
     )
 }

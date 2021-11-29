@@ -1,9 +1,27 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
+import { exercises } from "../Exercises";
 
-const Generator = () => {
+const Generator = (props) => {
   const [workout, setWorkout] = React.useState([]);
+  // const [value, setValue] = React.useState([]);
+
+  // useEffect(() => {}, [value]);
+  // const filterExercise = (type) => {
+  //   setValue(
+  //     value.filter((exercise) => {
+  //       return exercise.type === 'Cardio'
+  //     })
+  //   )
+  // }
+
+  //   let newArr = [...value];
+  //   newArr = newArr.filter((exercise) => {
+  //     return exercise.type === "Cardio";
+  //   });
+  //   setValue(newArr);
+  // }, [value]);
 
   useEffect(() => {
     axios
@@ -23,15 +41,29 @@ const Generator = () => {
   return (
     <div>
       <h1>Pick a Workout</h1>
+      <h3>Exercises that require weights:</h3>
       {workout.map((info) => {
         return (
           <div>
-          <Link className='link' to='/glossary'>{info.name}</Link>
+            <Link className="link" to="/glossary">
+              {info.name}
+            </Link>
           </div>
         );
       })}
-    </div>
-  );
+
+      <h3>Other Exercises:</h3>
+
+      {exercises.map((item) => {
+        return(
+          <div>
+       <Link className='link' to='/glossary'>{item.name}</Link>
+       </div> 
+        )
+      })
+    }
+  </div>
+  )
 };
 
-export default Generator;
+export default Generator; 
