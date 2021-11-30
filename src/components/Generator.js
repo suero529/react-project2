@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { exercises } from "../Exercises";
+import Emoji from "react-emoji-render";
 
 const Generator = (props) => {
   const [workout, setWorkout] = React.useState([]);
@@ -41,29 +42,33 @@ const Generator = (props) => {
 
   return (
     <div>
-      <h1>Some Ideas to Get You Started!</h1>
-      <h3>Exercises that require weights:</h3>
-      {workout.map((info) => {
-        return (
-          <div>
-            <Link className="link" to="/glossary">
-              {info.name}
-            </Link>
-          </div>
-        );
-      })}
+      <div className="api-box">
+        <h1>Some Ideas to Get You Started!</h1>
+        <h3>Exercises that require weights:</h3>
+        {workout.map((info) => {
+          return (
+            <div>
+              <Link className="link" to="/glossary">
+                {info.name}
+              </Link>
+            </div>
+          );
+        })}
+      </div>
 
-      <h3>Exercises that require just you-- and your energy! ;)</h3>
+      <div className="weightless-exercise-box">
+        <h3>Exercises that require just you-- and your energy! ;)</h3>
 
-      {exercises.map((item) => {
-        return (
-          <div>
-            <Link className="link" to="/glossary">
-              {item.name}
-            </Link>
-          </div>
-        );
-      })}
+        {exercises.map((item) => {
+          return (
+            <div>
+              <Link className="link" to="/glossary">
+                {item.name}
+              </Link>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

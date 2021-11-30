@@ -6,6 +6,7 @@ import About from './components/About'
 import Glossary from './components/Glossary'
 import {Switch, Route} from 'react-router-dom'
 
+
 function App() {
   return (
     <div>
