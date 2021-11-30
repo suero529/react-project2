@@ -25,10 +25,11 @@ const Glossary = () => {
     <div>
       <h1>Exercise Descriptions</h1>
       {workout.map((info) => {
+        console.log(info.description);
         return (
           <div>
             <h3>{info.name}</h3>
-            {info.description.replace("<p>", "").replace("</p>", "")}
+            {info.description.replace(/(<([^>]+)>)/gi, "")}
           </div>
         );
       })}

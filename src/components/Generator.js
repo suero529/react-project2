@@ -23,7 +23,7 @@ const Generator = (props) => {
   //     return exercise.type === "Cardio";
   //   });
   //   setValue(newArr);
-  // }, [value]);
+  // }, []);
 
   useEffect(() => {
     axios
@@ -42,8 +42,8 @@ const Generator = (props) => {
 
   return (
     <div>
+      <h1>Some Ideas to Get You Started!</h1>
       <div className="api-box">
-        <h1>Some Ideas to Get You Started!</h1>
         <h3>Exercises that require weights:</h3>
         {workout.map((info) => {
           return (
@@ -71,6 +71,16 @@ const Generator = (props) => {
             </div>
           );
         })}
+      </div>
+      <div className="workout-filter">
+        <h4>Choose Workout Type for the Day:</h4>
+        <select>
+          <option value=""></option>
+          <option value="">Cardio</option>
+          <option value="">Legs</option>
+          <option value="">Core</option>
+          <option value="">Arms</option>
+        </select>
       </div>
     </div>
   );
