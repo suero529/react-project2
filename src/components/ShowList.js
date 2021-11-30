@@ -6,6 +6,7 @@ const ShowList = (props) => {
     <div>
       <div className="exercise-list-box">
         <h1>Exercise List:</h1>
+
         {props.exercises.map((item) => {
           return (
             <div>
@@ -17,8 +18,6 @@ const ShowList = (props) => {
           );
         })}
       </div>
-
-      <Emojione style={{ fontSize: 30 }} text="❤️ :+1: :) :joy:" />
     </div>
   );
 };

@@ -20,6 +20,11 @@ const Nav = () => {
             </Link>
           </li>
           <li>
+            <Link className="link" to="/profile">
+              Profile
+            </Link>
+          </li>
+          <li>
             <Link className="link" to="/main">
               Main
             </Link>

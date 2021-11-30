@@ -42,6 +42,7 @@ const Generator = (props) => {
 
   return (
     <div>
+      <Emojione style={{ fontSize: 30 }} text="❤️ :+1: :) :joy:" />
       <h1>Some Ideas to Get You Started!</h1>
       <div className="api-box">
         <h3>Exercises that require weights:</h3>

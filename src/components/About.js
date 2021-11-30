@@ -40,7 +40,7 @@ const About = () => {
           alt="dancing broccoli"
         />
       </div>
-      <Link className="link" to="/main">
+      <Link className="link" to="/profile">
         <button>Time to plan it out!</button>
       </Link>
     </div>

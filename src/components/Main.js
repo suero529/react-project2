@@ -8,6 +8,16 @@ import { exercises } from "../Exercises";
 const Main = () => {
   const [newText, setNewText] = React.useState(exercises);
   const [value, setValue] = React.useState(exercises);
+  const [searchText, setSearchText] = React.useState("");
+
+  const searchforExercise = () => {
+    let sanitizedText = searchText.toLowerCase();
+    let newArr = [...newText];
+    newArr = newArr.filter((exercise) => {
+      return exercise.name.toLowerCase().includes(sanitizedText);
+    });
+    setNewText(newArr);
+  };
 
   const removeExercise = (name) => {
     let newArr = [...newText];
@@ -36,8 +46,19 @@ const Main = () => {
 
   return (
     <div>
-      <CreateExercise addExercise={addExercise} />
+      <div className="search-bar">
+        <h2>Search for Exercise</h2>
+        <input
+          name="search"
+          placeholder="search exercises"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+        ></input>
+        <button onClick={searchforExercise}>Go</button>
+      </div>
+
       <ShowList exercises={newText} delete={removeExercise} />
+      <CreateExercise addExercise={addExercise} />
       <Generator exercises={newText} filterExercise={filterExercise} />
     </div>
   );
