@@ -167,6 +167,40 @@ a:active {
   height: 385px;
 }
 
+/* PROFILE */
+
+.page-box {
+  display: flex;
+  justify-content: center;
+}
+
+.user-form-box {
+  display: flex;
+  justify-content: center;
+
+  width: 600px;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.red-text-box {
+  width: 50x;
+}
+
+.hover-message {
+  padding: 15px;
+  font-size: 12px;
+}
+
+.hover-message-box {
+  width: 300px;
+  height: fit-content;
+}
+
 /* CONTACT */
 .social-media {
   list-style: none;
