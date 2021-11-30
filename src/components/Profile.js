@@ -154,12 +154,9 @@ const Profile = (props) => {
               >
                 &times;
               </button>
-              <div>Popup content here!</div>
-              <div>Popup content here!</div>
-              <div>Popup content here!</div>
-              <div>Popup content here!</div>
-              <div>Popup content here!</div>
-              <div>Popup content here!</div>
+              <div className="activiy-lvl-table">
+                <h1>Activity Levels</h1>
+              </div>
             </div>
           )}
         </Popup>
