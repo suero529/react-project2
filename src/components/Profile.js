@@ -1,5 +1,7 @@
 import React from "react";
 import { Emojione } from "react-emoji-render";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
 const Profile = (props) => {
   const [firstName, setFirstName] = React.useState("");
@@ -16,6 +18,13 @@ const Profile = (props) => {
   const handleMouseLeave = (e) => {
     e.target.style.background = "none";
     setShowText(false);
+  };
+
+  const buttonMouseEnter = (e) => {
+    e.target.style.background = "sandybrown";
+  };
+  const buttonMouseLeave = (e) => {
+    e.target.style.background = "navajowhite";
   };
 
   return (
@@ -103,9 +112,6 @@ const Profile = (props) => {
           )}
 
           <label>Activity level : </label>
-          <button className="activity-button" style={{ fontSize: 14 }}>
-            (If you aren't sure, click HERE!)
-          </button>
           <select>
             <option placeholder="Select one"></option>
             <option>I'm a proud couch potato</option>
@@ -123,6 +129,28 @@ const Profile = (props) => {
             onChange={(e) => setFavCardio(e.target.value)}
           ></textarea>
         </form>
+      </div>
+      <div className="new-window">
+        <Popup
+          trigger={
+            <button
+              className="activity-button"
+              onMouseEnter={buttonMouseEnter}
+              onMouseLeave={buttonMouseLeave}
+              style={{ fontSize: 14 }}
+            >
+              If you aren't sure about your activity level, click HERE!
+            </button>
+          }
+          position="bottom center"
+        >
+          <div>Popup content here!</div>
+          <div>Popup content here!</div>
+          <div>Popup content here!</div>
+          <div>Popup content here!</div>
+          <div>Popup content here!</div>
+          <div>Popup content here!</div>
+        </Popup>
       </div>
     </div>
   );

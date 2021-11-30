@@ -1,5 +1,6 @@
 {
   "name": "lifting-state-practice",
+  "homepage": "https://suero529.github.io/react-project2/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,15 +8,19 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.24.0",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-emoji-render": "^1.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "reactjs-popup": "^2.0.5",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
