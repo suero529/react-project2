@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { exercises } from "../Exercises";
-import Emoji from "react-emoji-render";
+import { Emojione } from "react-emoji-render";
 
 const Generator = (props) => {
   const [workout, setWorkout] = React.useState([]);
@@ -47,9 +47,9 @@ const Generator = (props) => {
         <h3>Exercises that require weights:</h3>
         {workout.map((info) => {
           return (
-            <div>
+            <div className="api-exercises">
               <Link className="link" to="/glossary">
-                {info.name}
+                <p style={{ color: "dodgerblue" }}>{info.name}</p>
               </Link>
             </div>
           );
@@ -57,7 +57,10 @@ const Generator = (props) => {
       </div>
 
       <div className="weightless-exercise-box">
-        <h3>Exercises that require just you-- and your energy! ;)</h3>
+        <h3>
+          Exercises that require just you-- and your energy!
+          <Emojione style={{ fontSize: 30 }} text=";)" />
+        </h3>
 
         {exercises.map((item) => {
           return (
