@@ -6,10 +6,7 @@ const Profile = (props) => {
   const [lastName, setLastName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [gender, setGender] = React.useState("");
-  const [activityLvl, setActivityLvl] = React.useState("");
   const [favCardio, setFavCardio] = React.useState("");
-  const [hobbies, setHobbies] = React.useState("");
-  const [favoriteColor, setFavoriteColor] = React.useState("");
 
   const [showText, setShowText] = React.useState(false);
   const handleMouseEnter = (e) => {
@@ -53,26 +50,28 @@ const Profile = (props) => {
           ></input>
 
           <label>Please select which gender we should use : </label>
-          <label>
-            <input
-              name="gender"
-              placeholder="Select gender"
-              value={gender}
-              type="radio"
-              onClick={(e) => setGender(e.target.value)}
-            ></input>
-            Female
-          </label>
-          <label>
-            <input
-              name="gender"
-              placeholder="Select gender"
-              value={gender}
-              type="radio"
-              onClick={(e) => setGender(e.target.value)}
-            ></input>
-            Male
-          </label>
+          <div className="gender-box">
+            <label>
+              <input
+                name="gender"
+                placeholder="Select gender"
+                value={gender}
+                type="radio"
+                onClick={(e) => setGender(e.target.value)}
+              ></input>
+              Female
+            </label>
+            <label>
+              <input
+                name="gender"
+                placeholder="Select gender"
+                value={gender}
+                type="radio"
+                onClick={(e) => setGender(e.target.value)}
+              ></input>
+              Male
+            </label>
+          </div>
           <label
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -103,14 +102,26 @@ const Profile = (props) => {
             </div>
           )}
 
-          <label>Baseline activity level : </label>
-          <input
-            name="activityLvl"
-            placeholder="How active are you?"
-            value={activityLvl}
-            type="text"
-            onChange={(e) => setActivityLvl(e.target.value)}
-          ></input>
+          <label>Activity level : </label>
+          <button className="activity-button" style={{ fontSize: 14 }}>
+            (If you aren't sure, click HERE!)
+          </button>
+          <select>
+            <option placeholder="Select one"></option>
+            <option>I'm a proud couch potato</option>
+            <option>I walk my dog and stuff</option>
+            <option>Yep I workout</option>
+            <option>I live at the gym!</option>
+          </select>
+
+          <label>Favorite Cardio Activity : </label>
+          <textarea
+            style={{ width: 235 }}
+            name="favCardio"
+            placeholder="What gets your heart rate up?"
+            value={favCardio}
+            onChange={(e) => setFavCardio(e.target.value)}
+          ></textarea>
         </form>
       </div>
     </div>
