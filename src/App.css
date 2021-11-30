@@ -161,6 +161,10 @@ a:active {
   text-shadow: 0 0 15px rgb(238, 116, 10);
 }
 
+.dancing-broccoli {
+  height: 385px;
+}
+
 /* BOXES  */
 
 .blurb-box {
