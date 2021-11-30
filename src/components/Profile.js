@@ -142,14 +142,26 @@ const Profile = (props) => {
               If you aren't sure about your activity level, click HERE!
             </button>
           }
-          position="bottom center"
+          modal
+          nested
         >
-          <div>Popup content here!</div>
-          <div>Popup content here!</div>
-          <div>Popup content here!</div>
-          <div>Popup content here!</div>
-          <div>Popup content here!</div>
-          <div>Popup content here!</div>
+          {(close) => (
+            <div className="modal">
+              <button
+                className="close-button"
+                onClick={close}
+                style={{ float: "right" }}
+              >
+                &times;
+              </button>
+              <div>Popup content here!</div>
+              <div>Popup content here!</div>
+              <div>Popup content here!</div>
+              <div>Popup content here!</div>
+              <div>Popup content here!</div>
+              <div>Popup content here!</div>
+            </div>
+          )}
         </Popup>
       </div>
     </div>
