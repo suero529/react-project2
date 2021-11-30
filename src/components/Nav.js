@@ -29,6 +29,11 @@ const Nav = () => {
               Glossary
             </Link>
           </li>
+          <li>
+            <Link className="link" to="/contact">
+              Contact
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>

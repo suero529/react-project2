@@ -161,8 +161,15 @@ a:active {
   text-shadow: 0 0 15px rgb(238, 116, 10);
 }
 
+/* ABOUT */
+
 .dancing-broccoli {
   height: 385px;
+}
+
+/* CONTACT */
+.social-media {
+  list-style: none;
 }
 
 /* BOXES  */
