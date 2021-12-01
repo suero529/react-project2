@@ -117,7 +117,7 @@ const Profile = (props) => {
             <option>I'm a proud couch potato</option>
             <option>I walk my dog and stuff</option>
             <option>Yep I workout</option>
-            <option>I live at the gym!</option>
+            <option>I'm a gym rat!</option>
           </select>
 
           <label>Favorite Cardio Activity : </label>
@@ -155,7 +155,74 @@ const Profile = (props) => {
                 &times;
               </button>
               <div className="activiy-lvl-table">
-                <h1>Activity Levels</h1>
+                <h1 style={{ textAlign: "center" }}>
+                  Activity Levels Explained
+                  <Emojione text=":sparkles:" />
+                </h1>
+                <table style={{ width: 720 }}>
+                  <thead>
+                    <tr>
+                      <th style={{ backgroundColor: "mistyrose" }}>
+                        <h3>Sedentary</h3>
+                        <p style={{ fontSize: 14 }}>
+                          (I'm a proud couch potato)
+                        </p>
+                      </th>
+                      <th style={{ backgroundColor: "cornsilk" }}>
+                        <h3>Lightly Active</h3>
+                        <p style={{ fontSize: 14 }}>
+                          (I walk my dog and stuff)
+                        </p>
+                      </th>
+                      <th style={{ backgroundColor: "rgb(234 255 191)" }}>
+                        <h3>Active</h3>
+                        <p style={{ fontSize: 14 }}>(Yep I workout)</p>
+                      </th>
+                      <th style={{ backgroundColor: "honeydew" }}>
+                        <h3>Very Active</h3>
+                        <p style={{ fontSize: 14 }}>(I'm a gym rat!)</p>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style={{ backgroundColor: "mistyrose" }}>
+                        <ul>
+                          <li>Little or no exercise</li>
+                          <li>Mostly sitting</li>
+                          <li>Minimal movement (i.e. desk job)</li>
+                        </ul>
+                      </td>
+                      <td style={{ backgroundColor: "cornsilk" }}>
+                        <ul>
+                          <li>
+                            Intentional exercise every day for at least 30
+                            minutes
+                          </li>
+                          <li>Light exercise/sports 1-3 days/week</li>
+                        </ul>
+                      </td>
+                      <td style={{ backgroundColor: "rgb(234 255 191)" }}>
+                        <ul>
+                          <li>
+                            Intentional exercise every day for 45 min - hour
+                          </li>
+                          <li>Moderate exercise/sports 3-5 days/week</li>
+                        </ul>
+                      </td>
+                      <td style={{ backgroundColor: "honeydew" }}>
+                        <ul>
+                          <li>Intentional exercise every day</li>
+                          <li>
+                            Vigorous activities/workouts for an extended period
+                            of time (i.e. long distance running)
+                          </li>
+                          <li>Hard exercise/sports 6-7 days/week</li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           )}
