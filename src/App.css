@@ -162,6 +162,12 @@ a:active {
   letter-spacing: 2px;
   text-shadow: 0 0 15px rgb(238, 116, 10);
   padding-top: 50px;
+  margin-bottom: 45px;
+}
+
+.tagline {
+  padding-top: 0px;
+  text-shadow: 0 0 35px rgb(149, 174, 255);
 }
 
 .home-big-box {
@@ -328,8 +334,39 @@ td {
 }
 
 /* CONTACT */
+
 .social-media {
   list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-heading {
+  margin-top: 80px;
+}
+
+.address-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.address {
+  padding: 0px;
+  margin: 10px;
+}
+
+.follow {
+  margin-top: 50px;
+}
+
+.follow-us {
+  padding-bottom: 40px;
+}
+
+.follow ul li {
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 /* BOXES  */
