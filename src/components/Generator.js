@@ -80,13 +80,13 @@ const Generator = (props) => {
                   marginLeft: 120,
                   marginTop: 30,
                   marginBottom: 30,
+                  lineHeight: 4,
                 }}
                 className="api-exercises"
               >
                 <Link className="link" to="/glossary">
                   <p style={{ color: "dodgerblue" }}>{info.name}</p>
                 </Link>
-                <button onClick={createNewExercise}>Add</button>
               </div>
             );
           })}
