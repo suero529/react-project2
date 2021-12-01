@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { exercises } from "../Exercises";
-import { apiExercisesImg } from "../apiExercisesImg";
 
 const Glossary = () => {
   const [workout, setWorkout] = React.useState([]);
@@ -26,35 +25,40 @@ const Glossary = () => {
       <h1 style={{ textAlign: "center", fontSize: 50 }}>
         Exercise Descriptions
       </h1>
-      {exercises.map((item) => {
-        return (
-          <div>
-            <h2>{item.name}</h2>
-            {item.description}
-            <div>
-              <img
-                style={{ width: 300 }}
-                src={item.image}
-                alt="exercise-gif"
-              ></img>
+      <div className="big-box">
+        {exercises.map((item) => {
+          return (
+            <div className="glossary-exercise-box">
+              <h2 style={{ textAlign: "center" }}>{item.name}</h2>
+              {item.description}
+              <div className="exercise-gif-box">
+                <img
+                  className="exercise-gif"
+                  style={{ width: 300 }}
+                  src={item.image}
+                  alt="exercise-gif"
+                ></img>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
 
       {/* <button>Click Here for More Exercise Definitions:</button> */}
 
-      <h2 style={{ fontSize: 32, color: "sandybrown" }}>
-        More Exercise Definitions:
-      </h2>
-      {workout.map((info) => {
-        return (
-          <div>
-            <h2>{info.name}</h2>
-            {info.description.replace(/(<([^>]+)>)/gi, "")}
-          </div>
-        );
-      })}
+      <div className="api-exercises-box">
+        <h2 style={{ fontSize: 32, color: "sandybrown", textAlign: "center" }}>
+          More Exercise Definitions:
+        </h2>
+        {workout.map((info) => {
+          return (
+            <div>
+              <h2>{info.name}</h2>
+              {info.description.replace(/(<([^>]+)>)/gi, "")}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

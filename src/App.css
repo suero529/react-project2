@@ -261,6 +261,42 @@ td {
   border-left: solid 1px cornflowerblue;
 }
 
+/* GLOSSARY */
+
+.big-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.glossary-exercise-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid #eee;
+  border-radius: 25px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 50px 0 rgb(252, 198, 198);
+  margin: 50px 5% 0 5%;
+  padding: 20px 20px 20px 20px;
+  width: 40%;
+  background-color: snow;
+}
+
+.exercise-gif-box {
+  display: flex;
+  justify-content: center;
+}
+
+.exercise-gif {
+  padding-top: 20px;
+}
+
+.api-exercises-box {
+  margin: 50px;
+  padding: 50px;
+}
+
 /* CONTACT */
 .social-media {
   list-style: none;
