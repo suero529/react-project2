@@ -192,8 +192,6 @@ a:active {
   padding: 30px;
 }
 
-/* ABOUT */
-
 .dancing-broccoli-box {
   display: flex;
   justify-content: center;
@@ -201,6 +199,18 @@ a:active {
 
 .dancing-broccoli {
   height: 385px;
+}
+
+/* ABOUT */
+
+.week-table {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-box {
+  display: flex;
+  justify-content: center;
 }
 
 /* PROFILE */
