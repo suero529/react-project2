@@ -31,6 +31,7 @@ const Profile = (props) => {
     <div className="page-box">
       <div className="user-form-box">
         <form className="user-form">
+          <h1 className="join-us">Join Us!</h1>
           <label>First Name : </label>
           <input
             name="firstName"
@@ -39,7 +40,7 @@ const Profile = (props) => {
             type="text"
             onChange={(e) => setFirstName(e.target.value)}
           ></input>
-
+          <br />
           <label>Last Name : </label>
           <input
             name="lastName"
@@ -48,7 +49,7 @@ const Profile = (props) => {
             type="text"
             onChange={(e) => setLastName(e.target.value)}
           ></input>
-
+          <br />
           <label>Email : </label>
           <input
             name="email"
@@ -57,7 +58,7 @@ const Profile = (props) => {
             type="text"
             onChange={(e) => setEmail(e.target.value)}
           ></input>
-
+          <br />
           <label>Please select which gender we should use : </label>
           <div className="gender-box">
             <label>
@@ -110,7 +111,7 @@ const Profile = (props) => {
               </p>
             </div>
           )}
-
+          <br />
           <label>Activity level : </label>
           <select>
             <option placeholder="Select one"></option>
@@ -119,7 +120,7 @@ const Profile = (props) => {
             <option>Yep I workout</option>
             <option>I'm a gym rat!</option>
           </select>
-
+          <br />
           <label>Favorite Cardio Activity : </label>
           <textarea
             style={{ width: 235 }}
@@ -128,6 +129,8 @@ const Profile = (props) => {
             value={favCardio}
             onChange={(e) => setFavCardio(e.target.value)}
           ></textarea>
+          <br />
+          <button className="submit">Submit</button>
         </form>
       </div>
       <div className="new-window">
@@ -190,7 +193,7 @@ const Profile = (props) => {
                         <ul>
                           <li>Little or no exercise</li>
                           <li>Mostly sitting</li>
-                          <li>Minimal movement (i.e. desk job)</li>
+                          <li>Minimal movement (i.e. desk job, coding)</li>
                         </ul>
                       </td>
                       <td style={{ backgroundColor: "cornsilk" }}>
