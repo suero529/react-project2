@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import { exercises } from "../Exercises";
 
 const Glossary = () => {
@@ -23,12 +22,14 @@ const Glossary = () => {
 
   return (
     <div>
-      <h1>Exercise Descriptions</h1>
+      <h1 style={{ textAlign: "center", fontSize: 50 }}>
+        Exercise Descriptions
+      </h1>
       {workout.map((info) => {
         console.log(info.description);
         return (
           <div>
-            <h3>{info.name}</h3>
+            <h2>{info.name}</h2>
             {info.description.replace(/(<([^>]+)>)/gi, "")}
           </div>
         );
@@ -37,8 +38,15 @@ const Glossary = () => {
       {exercises.map((item) => {
         return (
           <div>
-            <h3>{item.name}</h3>
+            <h2>{item.name}</h2>
             {item.description}
+            <div>
+              <img
+                style={{ width: 300 }}
+                src={item.image}
+                alt="exercise-gif"
+              ></img>
+            </div>
           </div>
         );
       })}
