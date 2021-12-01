@@ -7,6 +7,7 @@ import { exercises } from "../Exercises";
 
 const Main = () => {
   const [newText, setNewText] = React.useState(exercises);
+  const [addWeightEx, setAddWeightEx] = React.useState(exercises);
   const [value, setValue] = React.useState(exercises);
   const [searchText, setSearchText] = React.useState("");
 
@@ -36,13 +37,19 @@ const Main = () => {
     setNewText(newArr);
   };
 
-  const filterExercise = (type) => {
-    let newArr = [...value];
-    newArr = newArr.filter((exercise) => {
-      return exercise.type === "Cardio";
-    });
-    setValue(newArr);
-  };
+  // const addWeightExercise = (newWeightExercise) => {
+  //   let newArr = [...addWeightEx];
+  //   newArr.push(newWeightExercise);
+  //   setAddWeightEx(newArr);
+  // };
+
+  // const filterExercise = (type) => {
+  //   let newArr = [...value];
+  //   newArr = newArr.filter((exercise) => {
+  //     return exercise.type === "Cardio";
+  //   });
+  //   setValue(newArr);
+  // };
 
   return (
     <div>
@@ -59,7 +66,7 @@ const Main = () => {
 
       <ShowList exercises={newText} delete={removeExercise} />
       <CreateExercise addExercise={addExercise} />
-      <Generator exercises={newText} filterExercise={filterExercise} />
+      <Generator addExercise={addExercise} />
     </div>
   );
 };

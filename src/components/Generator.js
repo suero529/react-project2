@@ -7,6 +7,13 @@ import { Emojione } from "react-emoji-render";
 const Generator = (props) => {
   const [workout, setWorkout] = React.useState([]);
 
+  const [text, setText] = React.useState("");
+
+  const createNewExercise = () => {
+    const newExercise = { name: text };
+    props.addExercise(newExercise);
+  };
+
   // const [value, setValue] = React.useState([]);
 
   // useEffect(() => {}, [value]);
@@ -52,6 +59,7 @@ const Generator = (props) => {
               <Link className="link" to="/glossary">
                 <p style={{ color: "dodgerblue" }}>{info.name}</p>
               </Link>
+              <button onClick={createNewExercise}>Add</button>
             </div>
           );
         })}
