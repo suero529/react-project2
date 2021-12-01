@@ -3,9 +3,16 @@ import { Emojione } from "react-emoji-render";
 
 const ShowList = (props) => {
   return (
-    <div>
+    <div className="exercise-list-big-box">
       <div className="exercise-list-box">
-        <h1>Exercise List:</h1>
+        <h1
+          style={{
+            textAlign: "center",
+            color: "lightsalmon",
+          }}
+        >
+          Exercise List:
+        </h1>
 
         {props.exercises.map((item) => {
           return (

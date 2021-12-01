@@ -49,47 +49,90 @@ const Generator = (props) => {
 
   return (
     <div>
-      <Emojione style={{ fontSize: 30 }} text="❤️ :+1: :) :joy:" />
-      <h1>Some Ideas to Get You Started!</h1>
-      <div className="api-box">
-        <h3>Exercises that require weights:</h3>
-        {workout.map((info) => {
-          return (
-            <div className="api-exercises">
-              <Link className="link" to="/glossary">
-                <p style={{ color: "dodgerblue" }}>{info.name}</p>
-              </Link>
-              <button onClick={createNewExercise}>Add</button>
-            </div>
-          );
-        })}
-      </div>
+      <h1
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: 100,
+          color: "sandybrown",
+        }}
+      >
+        Some Ideas to Get You Started!
+      </h1>
+      <div
+        style={{ display: "flex", justifyContent: "center", marginBottom: 100 }}
+      >
+        <div className="api-box">
+          <h3
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: 30,
+              fontSize: 22,
+            }}
+          >
+            Exercises that require weights:
+          </h3>
+          {workout.map((info) => {
+            return (
+              <div
+                style={{
+                  marginLeft: 120,
+                  marginTop: 30,
+                  marginBottom: 30,
+                }}
+                className="api-exercises"
+              >
+                <Link className="link" to="/glossary">
+                  <p style={{ color: "dodgerblue" }}>{info.name}</p>
+                </Link>
+                <button onClick={createNewExercise}>Add</button>
+              </div>
+            );
+          })}
+        </div>
 
-      <div className="weightless-exercise-box">
-        <h3>
-          Exercises that require just you-- and your energy!
-          <Emojione style={{ fontSize: 30 }} text=";)" />
-        </h3>
-
-        {exercises.map((item) => {
-          return (
-            <div>
-              <Link className="link" to="/glossary">
-                {item.name}
-              </Link>
-            </div>
-          );
-        })}
-      </div>
-      <div className="workout-filter">
-        <h4>Choose Workout Type for the Day:</h4>
-        <select>
-          <option value=""></option>
-          <option value="">Cardio</option>
-          <option value="">Legs</option>
-          <option value="">Core</option>
-          <option value="">Arms</option>
-        </select>
+        <div className="weightless-exercise-box">
+          <h3
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: 30,
+              fontSize: 22,
+            }}
+          >
+            Exercises that require just you--
+          </h3>{" "}
+          <h3
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: 30,
+              fontSize: 22,
+            }}
+          >
+            and your energy!
+            <Emojione style={{ fontSize: 30 }} text=";)" />
+          </h3>
+          <div
+            style={{
+              marginLeft: 220,
+              marginTop: 30,
+              marginBottom: 30,
+              lineHeight: 4,
+            }}
+          >
+            {exercises.map((item) => {
+              return (
+                <div>
+                  <Link className="link" to="/glossary">
+                    {item.name}
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );

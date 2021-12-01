@@ -7,8 +7,6 @@ import { exercises } from "../Exercises";
 
 const Main = () => {
   const [newText, setNewText] = React.useState(exercises);
-  const [addWeightEx, setAddWeightEx] = React.useState(exercises);
-  const [value, setValue] = React.useState(exercises);
   const [searchText, setSearchText] = React.useState("");
 
   const searchforExercise = () => {
@@ -26,9 +24,6 @@ const Main = () => {
       return item.name !== name;
     });
     setNewText(newArr);
-    if (newArr === []) {
-      alert("Great job! How did you feel today?");
-    }
   };
 
   const addExercise = (newExercise) => {
@@ -36,12 +31,6 @@ const Main = () => {
     newArr.push(newExercise);
     setNewText(newArr);
   };
-
-  // const addWeightExercise = (newWeightExercise) => {
-  //   let newArr = [...addWeightEx];
-  //   newArr.push(newWeightExercise);
-  //   setAddWeightEx(newArr);
-  // };
 
   // const filterExercise = (type) => {
   //   let newArr = [...value];

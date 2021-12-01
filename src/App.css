@@ -362,6 +362,8 @@ td {
   padding: 50px;
 }
 
+/* MAIN */
+
 /* CONTACT */
 
 .social-media {
@@ -411,6 +413,11 @@ td {
   background-color: snow;
 }
 
+.exercise-list-big-box {
+  display: flex;
+  justify-content: center;
+}
+
 .exercise-list-box {
   border: 2px solid #eee;
   border-radius: 25px;
@@ -418,7 +425,21 @@ td {
   box-shadow: 5px 5px 25px 0 rgb(252, 198, 198);
   margin: 50px 5% 0 5%;
   padding: 20px 20px 20px 20px;
-  width: 40%;
+  width: 600px;
+  background-color: snow;
+}
+
+.add-own {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid #eee;
+  border-radius: 25px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 25px 0 rgb(252, 198, 198);
+  margin: 50px 5% 0 5%;
+  padding: 20px 20px 20px 20px;
+  width: 600px;
   background-color: snow;
 }
 
@@ -442,4 +463,8 @@ td {
   padding: 20px 20px 20px 20px;
   width: 40%;
   background-color: honeydew;
+}
+
+.search-bar {
+  margin: 50px 0 0 80px;
 }
